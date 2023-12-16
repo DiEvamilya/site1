@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<h1> Category: </h1>
+
+{% for genre in category %}
+
+    <p>{{ genre }}
+   <a href="{% url 'musician_list' genre.slug %}">Посмотреть</a>
+   </p>
+
+{% endfor %}
+</div>
+
+</body>
+</html>
